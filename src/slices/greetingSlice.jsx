@@ -5,14 +5,13 @@ export const fetchGreeting = createAsyncThunk('Fetching/greeting', async () => {
     console.log("API URL:", url);
     try {
         const response = await axios.get(url);
-        console.log("API Response:", response.data); // Add this line
+        console.log("API Response:", response.data);
         return await response.data;
     } catch (error) {
         console.error("API Error:", error);
         throw error;
     }
 });
-
 
 const initialState = {
     greeting: {},
@@ -23,6 +22,7 @@ const initialState = {
 const greetingSlice = createSlice({
     name:"greeting",
     initialState,
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchGreeting.pending, (state)=>{
             state.isLoading = true

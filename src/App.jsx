@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-    <Greeting />
+      <Greeting />
     </>
   )
 }
