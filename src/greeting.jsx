@@ -1,26 +1,31 @@
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchGreeting } from "./slices/greetingSlice"
-const Greeting = () =>{
-    const greetings = useSelector((store)=> store.greeting)
-    const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch(fetchGreeting())
-    },[])
 
-    if(greetings.isLoading){
-        return <p>Loading....</p>
+const Greeting = () => {
+    const greetingData = useSelector((store) => store.greeting); 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchGreeting());
+    }, []);
+
+    console.log("Greeting Data:", greetingData); 
+
+    if (greetingData.isLoading) {
+        return <p>Loading....</p>;
     }
 
-    if (greetings.error) {
-        return <p>Error: {greetings.error}</p>;
-      }
+    if (greetingData.error) {
+        return <p>Error: {greetingData.error}</p>;
+    }
+
     return (
-    <>
-    <h1>Random Greeting</h1>
-    <p>{greetings.greeting.text}</p>
-    </>
-    )
+        <>
+            <h1>Random Greeting</h1>
+            <p>{greetingData.greeting.text || 'No greeting available'}</p>
+        </>
+    );
 }
 
 export default Greeting;
