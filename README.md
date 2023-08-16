@@ -71,12 +71,9 @@ In order to run this project you need:
 
 ### Setup
 * git clone https://github.com/hasnatali1947/Hello_frontEnd.git
+* git clone https://github.com/hasnatali1947/Hello_backEnd.git
 * cd hello_frontEnd
 * git checkout development
-
-### back-end link
-* git clone https://github.com/hasnatali1947/Hello_backEnd.git
-* cd hello_back-end
 
 ### Install
 -Command: npm install
@@ -94,8 +91,8 @@ In order to run this project you need:
 👤 **Hasnat Ali**
 
 - GitHub: [@Hasnat ali](https://github.com/AbbasSarwar)
-- Twitter: [@Abbas_sDev](https://twitter.com/Abbas_sDev)
-- LinkedIn: [Abbas-Sarwar](https://www.linkedin.com/in/abbas-sarwar-4a0b16257/)
+- Twitter: [@Hasnat](https://twitter.com/Abbas_sDev)
+- LinkedIn: [Hasnat](https://www.linkedin.com/in/abbas-sarwar-4a0b16257/)
 
 
 ## 🔭 Future Features <a name="future-features"></a>
